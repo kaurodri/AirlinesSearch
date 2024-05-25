@@ -3,7 +3,11 @@ import scrapy
 
 class LatamSpider(scrapy.Spider):
     name = "latam"
-    start_urls = ["https://www.latamairlines.com/br/pt/oferta-voos/?origin=UDI&inbound=null&outbound=2024-06-20T12%3A00%3A00.000Z&destination=THE&adt=1&chd=0&inf=0&trip=OW&cabin=Economy&redemption=false&sort=PRICE%2Casc"]
+    start_urls = ["https://www.latamairlines.com/br/pt"]
 
     def parse(self, response):
-        pass
+        ida_hora = "span.sc-bczRLJ.llDzZl.latam-typography.latam-typography--heading-04.sc-gsnTZi.cardFlightstyle__TextHourFlight-sc__sc-1fa5kbc-18.jnFvAE.JXvbY"
+        bloco = "div.bodyFlightsstyle__ListItemAvailableFlights-sc__sc-1g00tx2-5.cNdlNa"
+        conteudo = "div.cardFlightstyle__WrapperCardShadow-sc__sc-1fa5kbc-0.cFjvbF"
+
+        placeholder="Brasília, DF"
